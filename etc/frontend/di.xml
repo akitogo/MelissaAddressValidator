@@ -1,0 +1,33 @@
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Akitogo\MelissaAddressValidator\Plugin\LayoutProcessor">
+        <arguments>
+            <argument name="helperData" xsi:type="object">\Akitogo\MelissaAddressValidator\Helper\Data</argument>
+        </arguments>
+    </type>
+    <type name="Magento\Checkout\Block\Checkout\LayoutProcessor">
+        <plugin name="checkout_melissa_address_validation_plugin" type="Akitogo\MelissaAddressValidator\Plugin\LayoutProcessor" sortOrder="1" disabled="false" />
+    </type>
+    <virtualType name="Akitogo\MelissaAddressValidator\LoggerFile" type="Magento\Framework\Logger\Handler\Base">
+        <arguments>
+            <argument name="fileName" xsi:type="string">/var/log/MelissaAPI.log</argument>
+        </arguments>
+    </virtualType>
+    <virtualType name="Akitogo\MelissaAddressValidator\Logger" type="Magento\Framework\Logger\Monolog">
+        <arguments>
+            <argument name="handlers" xsi:type="array">
+                <item name="debug" xsi:type="object">Akitogo\MelissaAddressValidator\LoggerFile</item>
+            </argument>
+        </arguments>
+    </virtualType>
+    <type name="Akitogo\MelissaAddressValidator\Controller\Address\Validate">
+        <arguments>
+            <argument name="config" xsi:type="object">\Magento\Framework\App\Action\Context</argument>
+            <argument name="jsonFactory" xsi:type="object">\Magento\Framework\Controller\Result\JsonFactory</argument>
+            <argument name="clientFactory" xsi:type="object">\GuzzleHttp\ClientFactory</argument>
+            <argument name="logger" xsi:type="object">\Akitogo\MelissaAddressValidator\Logger</argument>
+            <argument name="region" xsi:type="object">\Magento\Directory\Model\Region</argument>
+            <argument name="data" xsi:type="object">\Akitogo\MelissaAddressValidator\Helper\Data</argument>
+            <argument name="formKeyValidator" xsi:type="object">\Magento\Framework\Data\Form\FormKey\Validator</argument>
+        </arguments>
+    </type>
+</config>
