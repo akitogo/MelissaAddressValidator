@@ -1,7 +1,7 @@
 # Akitogo Melissa Address Validator for Magento 2
 Magento 2 Extension for validating postal addresses using Melissa Data api service.
 
-Please note that this module requires a valid api key from Melissa Data to work. 
+Please note that this module requires a valid api key from Melissa Data to work, please check https://www.melissa.com/developer/
 
 If you find any bug, feel free to submit a pull request or file a bug report. If you are interested in commercial support, please get in touch with Akitogo. Please check www.akitogo.com
 
