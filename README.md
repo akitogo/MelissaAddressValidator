@@ -5,6 +5,15 @@ Please note that this module requires a valid api key from Melissa Data to work.
 
 If you find any bug, feel free to submit a pull request or file a bug report. If you are interested in commercial support, please get in touch with Akitogo. Please check www.akitogo.com
 
+### COMPOSER INSTALLATION
+* run composer command:
+>`$> composer require akitogo/melissa-address-validator`
+
+### MANUAL INSTALLATION
+* extract files from an archive
+
+* deploy files into Magento2 folder `app/code/akitogo/MelissaAddressValidator`
+
 ### About Akitogo
 We are specialised in developing customized e-commerce solutions based on Magento.
 
