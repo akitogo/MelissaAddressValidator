@@ -13,8 +13,11 @@
     "keywords": ["magento", "melissa", "validator", "validation", "suggestion","address"],
     "authors": [
         {
-            "name": "A. Waltrowski - Akitogo GmbH",
+            "name": "Akitogo Internet and Media Applications GmbH",
             "email": "info@akitogo.com"
+        },        
+        {
+            "name": "A. Waltrowski"
         }
     ],
     "autoload": {
