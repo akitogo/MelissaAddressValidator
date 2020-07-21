@@ -14,6 +14,10 @@ If you find any bug, feel free to submit a pull request or file a bug report. If
 
 * deploy files into Magento2 folder `app/code/akitogo/MelissaAddressValidator`
 
+### Versions
+* 1.0.1 21st July 2020 fixing api response handling
+* 1.0.1 15th July 2020 Initial release
+
 ### About Akitogo
 We are specialised in developing customized e-commerce solutions based on Magento.
 

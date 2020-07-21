@@ -2,7 +2,7 @@
     "name": "akitogo/melissa-address-validator",
     "description": "Checkout shipping address validation and suggestion using Melissa API.",
     "type": "magento2-module",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "homepage": "https://github.com/akitogo/MelissaAddressValidator",
     "license": "MIT",
     "keywords": ["magento", "melissa", "validator", "validation", "suggestion","address"],

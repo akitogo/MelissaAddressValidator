@@ -179,8 +179,11 @@ class Validate extends Action implements HttpPostActionInterface
             'placeOrder' => true,
             'errorSuggestedAddresses' => []
         ];
-        if (!$response['MelissaSuccess'] || $response['TransmissionResults']) {
+        if (array_key_exists('TransmissionResults', $response) && $response['TransmissionResults']) {
             $this->handleMelissaError($response['TransmissionResults']);
+            return $processedResponse;
+        }
+        if (!$response['MelissaSuccess']) {
             return $processedResponse;
         }
         foreach ($response['Records'] as $validatedAddress) {
@@ -196,9 +199,6 @@ class Validate extends Action implements HttpPostActionInterface
 
     protected function handleMelissaError($status = null)
     {
-        if (!$status) {
-            return;
-        }
         switch ($status) {
             case 'GE02':
                 $logMessage = 'Empty Request Record Structure';
