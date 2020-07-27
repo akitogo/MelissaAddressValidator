@@ -9,10 +9,10 @@ If you find any bug, feel free to submit a pull request or file a bug report. If
 If your theme uses a custom button/mechanism for triggering place order, the triggerPlaceOrder function has to be overridden accordingly.
 
 Please do:
-Create a Mixin (app/design/frontend/<Vendor>/<Theme>/web/js/mixins/melissa-address-validator.js)
+Create a Mixin (`app/design/frontend/<Vendor>/<Theme>/web/js/mixins/melissa-address-validator.js`)
 For Mixins see: https://devdocs.magento.com/guides/v2.4/javascript-dev-guide/javascript/js_mixins.html
 
-Add mixin to melissa validator js (app/design/frontend/<Vendor>/<Theme>/requirejs-config.js)
+Add mixin to melissa validator js (`app/design/frontend/<Vendor>/<Theme>/requirejs-config.js`)
 ```
 var config = {
     config: {
