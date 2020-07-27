@@ -25,7 +25,7 @@ var config = {
 ```
 In this example we have a custom methods and buttons for placing order - we are looking for button with different classes that have _active class:
 
-![Example]https://github.com/akitogo/MelissaAddressValidator/README.png?raw=true)
+![Example](README.png?raw=true)
 
 ### COMPOSER INSTALLATION
 * run composer command:
