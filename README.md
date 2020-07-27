@@ -5,6 +5,28 @@ Please note that this module requires a valid api key from Melissa Data to work,
 
 If you find any bug, feel free to submit a pull request or file a bug report. If you are interested in commercial support, please get in touch with Akitogo. Please check www.akitogo.com
 
+### Please note
+If your theme uses a custom button/mechanism for triggering place order, the triggerPlaceOrder function has to be overridden accordingly.
+
+Please do:
+Create a Mixin (app/design/frontend/<Vendor>/<Theme>/web/js/mixins/melissa-address-validator.js)
+For Mixins see: https://devdocs.magento.com/guides/v2.4/javascript-dev-guide/javascript/js_mixins.html
+
+Add mixin to melissa validator js (app/design/frontend/<Vendor>/<Theme>/requirejs-config.js)
+```
+var config = {
+    config: {
+        mixins: {
+            'Akitogo_MelissaAddressValidator/js/validator': {
+                'js/mixins/melissa-address-validator': true
+            }
+        }
+    },
+```
+In this example we have a custom methods and buttons for placing order - we are looking for button with different classes that have _active class:
+
+![Example]https://github.com/akitogo/MelissaAddressValidator/README.png?raw=true)
+
 ### COMPOSER INSTALLATION
 * run composer command:
 >`$> composer require akitogo/melissa-address-validator`
