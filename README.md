@@ -3,7 +3,7 @@ Magento 2 Extension for validating postal addresses using Melissa Data api servi
 
 Please note that this module requires a valid api key from Melissa Data to work, please check https://www.melissa.com/developer/
 
-If you find any bug, feel free to submit a pull request or file a bug report. If you are interested in commercial support, please get in touch with Akitogo. Please check www.akitogo.com
+If you find any bug, feel free to submit a pull request or file a bug report. If you are interested in commercial support, please get in touch with Akitogo. Please check https://www.akitogo.com/blog/address-validation-for-magento-2-with-melissa-data
 
 ### Please note
 If your theme uses a custom button/mechanism for triggering place order, the triggerPlaceOrder function has to be overridden accordingly.
