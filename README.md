@@ -5,6 +5,8 @@ Please note that this module requires a valid api key from Melissa Data to work,
 
 If you find any bug, feel free to submit a pull request or file a bug report. If you are interested in commercial support, please get in touch with Akitogo. Please check https://www.akitogo.com/blog/address-validation-for-magento-2-with-melissa-data
 
+The extension is as well officially available at the Magento Marketplace https://marketplace.magento.com/akitogo-melissa-address-validator.html
+
 ### Please note
 If your theme uses a custom button/mechanism for triggering place order, the triggerPlaceOrder function has to be overridden accordingly.
 
