@@ -39,6 +39,7 @@ In this example we have a custom methods and buttons for placing order - we are 
 * deploy files into Magento2 folder `app/code/akitogo/MelissaAddressValidator`
 
 ### Versions
+* 1.0.2 9th June 2021 no code changes, just checked compatibility with 2.4
 * 1.0.1 21st July 2020 fixing api response handling
 * 1.0.1 15th July 2020 Initial release
 
