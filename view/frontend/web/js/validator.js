@@ -41,7 +41,7 @@ define([
             countryData: customerData.get('directory-data'),
             triggerPlaceOrder: function () {
                 window.akitogoMelissaAddressValid = true;
-                $('.actions-toolbar button.action.checkout').first().trigger('click');
+                $('.payment-method._active .actions-toolbar button.action.checkout').trigger('click');
             },
             getCountryName: function (countryId) {
                 return this.countryData()[countryId] !== undefined ? this.countryData()[countryId].name : '';
