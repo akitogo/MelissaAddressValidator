@@ -91,15 +91,15 @@ class Validate extends Action implements HttpPostActionInterface
     protected function prepareParams(RequestInterface $request)
     {
         $params = [
-            'TransmissionReference' => 1,
+            'TransmissionReference' => "address_validator",
             'CustomerID' => $this->getCustomerId(),
-            'Options' => 'DeliveryLines:ON',
+            'Options' => 'DeliveryLines:on',
             'Records' => []
         ];
         $addresses = $request->getParam('addresses');
         foreach ($addresses as $index => $address) {
             $tmp = [
-                'RecordID' => $index
+                'RecordID' => (string)$index
             ];
             foreach ($address as $key => $value) {
                 $this->addField($tmp, $key, $value);
@@ -158,7 +158,10 @@ class Validate extends Action implements HttpPostActionInterface
                 Request::HTTP_METHOD_POST,
                 self::API_REQUEST_ENDPOINT,
                 [
-                    'json' => $params
+                    'headers' => [
+                        'Accept' => 'application/json'
+                    ],
+                    'body' => json_encode($params)
                 ]
             );
             $response = json_decode($request->getBody()->getContents(), true);
